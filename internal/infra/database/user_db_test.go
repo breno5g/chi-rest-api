@@ -10,7 +10,7 @@ import (
 )
 
 func TestCreateUser(t *testing.T) {
-	db, err := gorm.Open(sqlite.Open("file::memory"), &gorm.Config{})
+	db, err := gorm.Open(sqlite.Open("file::memory:"), &gorm.Config{})
 	assert.Nil(t, err)
 
 	db.AutoMigrate(&entity.User{})
@@ -31,7 +31,7 @@ func TestCreateUser(t *testing.T) {
 }
 
 func TestFindByEmail(t *testing.T) {
-	db, err := gorm.Open(sqlite.Open("file::memory"), &gorm.Config{})
+	db, err := gorm.Open(sqlite.Open("file::memory:"), &gorm.Config{})
 	assert.Nil(t, err)
 
 	db.AutoMigrate(&entity.User{})
