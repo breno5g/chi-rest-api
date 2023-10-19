@@ -1,12 +1,15 @@
 package entity
 
-import "golang.org/x/crypto/bcrypt"
+import (
+	"github.com/breno5g/chi-rest-api/pkg/entity"
+	"golang.org/x/crypto/bcrypt"
+)
 
 type User struct {
-	ID       string `json:"id"`
-	Username string `json:"username"`
-	Email    string `json:"email"`
-	Password string `json:"-"`
+	ID       entity.ID `json:"id"`
+	Username string    `json:"username"`
+	Email    string    `json:"email"`
+	Password string    `json:"-"`
 }
 
 func NewUser(name, email, password string) (*User, error) {
@@ -16,7 +19,7 @@ func NewUser(name, email, password string) (*User, error) {
 	}
 
 	return &User{
-		ID:       "id",
+		ID:       entity.NewID(),
 		Username: name,
 		Email:    email,
 		Password: string(hash),
