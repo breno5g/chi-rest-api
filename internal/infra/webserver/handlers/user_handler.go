@@ -27,7 +27,7 @@ func NewUserHandler(userDB database.UserInterface) *UserHandler {
 
 func (h *UserHandler) GetJWT(w http.ResponseWriter, r *http.Request) {
 	jwt := r.Context().Value("jwt").(*jwtauth.JWTAuth)
-	jwtExpiresIn := r.Context().Value("JwtExperesIn").(int)
+	jwtExpiresIn := r.Context().Value("JwtExpiresIn").(int)
 	var user dto.GetJWTInput
 	err := json.NewDecoder(r.Body).Decode(&user)
 	if err != nil {
@@ -49,6 +49,7 @@ func (h *UserHandler) GetJWT(w http.ResponseWriter, r *http.Request) {
 		"sub": u.ID.String(),
 		"exp": time.Now().Add(time.Second * time.Duration(jwtExpiresIn)).Unix(),
 	})
+
 	accessToken := dto.GetJWTOutput{AccessToken: tokenString}
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)

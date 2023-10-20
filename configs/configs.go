@@ -15,7 +15,7 @@ type conf struct {
 	DBPassword    string `mapstructure:"DB_PASSWORD"`
 	DBName        string `mapstructure:"DB_NAME"`
 	WebServerPort string `mapstructure:"WEB_SERVER_PORT"`
-	JWTSecret     string `mapstructure:"JWT_SECRET"`
+	JWTSecretKey  string `mapstructure:"JWT_SECRET_KEY"`
 	JWTExpiresIn  int    `mapstructure:"JWT_EXPIRES_IN"`
 	TokenAuth     *jwtauth.JWTAuth
 }
@@ -36,7 +36,7 @@ func InitConfig(path string) (*conf, error) {
 		panic(err)
 	}
 
-	cfg.TokenAuth = jwtauth.New("HS256", []byte(cfg.JWTSecret), nil)
+	cfg.TokenAuth = jwtauth.New("HS256", []byte(cfg.JWTSecretKey), nil)
 
 	return cfg, nil
 }

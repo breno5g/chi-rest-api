@@ -35,7 +35,7 @@ func main() {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.WithValue("jwt", configs.TokenAuth))
-	r.Use(middleware.WithValue("JwtExperesIn", configs.JWTExpiresIn))
+	r.Use(middleware.WithValue("JwtExpiresIn", configs.JWTExpiresIn))
 
 	r.Route("/products", func(r chi.Router) {
 		r.Use(jwtauth.Verifier(configs.TokenAuth))
