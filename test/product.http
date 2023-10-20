@@ -1,5 +1,6 @@
 POST http://localhost:3001/products HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc4MzQ3MzEsInN1YiI6IjJhZGQ4NmYxLTg4OGMtNDAxMy1hOTM1LTkwODlhMmE2NmRmZiJ9.R9K3nnPRLOdSpYtUxUlxjgv9Sn2R1x1sD6ahEB0t5pg
 
 {
   "name": "My Product",
@@ -9,7 +10,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3001/products HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjU1MDQxNDAsInN1YiI6IjFhZmE4MjBiLWY3OWItNDZlYi1hOWQzLWVmNjE4OTFlYTUwMSJ9.9GrED1FqYxU6cslds9bs75f8x1oXK8FrQ8DncHfOl7c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc4MzQ3MzEsInN1YiI6IjJhZGQ4NmYxLTg4OGMtNDAxMy1hOTM1LTkwODlhMmE2NmRmZiJ9.R9K3nnPRLOdSpYtUxUlxjgv9Sn2R1x1sD6ahEB0t5pg
 
 ###
 
@@ -19,6 +20,7 @@ GET http://localhost:3001/products/a28756d6-8c4a-4935-84f3-936ef6afd688 HTTP/1.1
 
 PUT http://localhost:3001/products/a28756d6-8c4a-4935-84f3-936ef6afd688 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc4MzQ3MzEsInN1YiI6IjJhZGQ4NmYxLTg4OGMtNDAxMy1hOTM1LTkwODlhMmE2NmRmZiJ9.R9K3nnPRLOdSpYtUxUlxjgv9Sn2R1x1sD6ahEB0t5pg
 
 {
   "name": "My Product Updated",
@@ -28,3 +30,4 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3001/products/a28756d6-8c4a-4935-84f3-936ef6afd688 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc4MzQ3MzEsInN1YiI6IjJhZGQ4NmYxLTg4OGMtNDAxMy1hOTM1LTkwODlhMmE2NmRmZiJ9.R9K3nnPRLOdSpYtUxUlxjgv9Sn2R1x1sD6ahEB0t5pg
