@@ -14,9 +14,22 @@ import (
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 
+	_ "github.com/breno5g/chi-rest-api/docs"
 	httpSwagger "github.com/swaggo/http-swagger"
 )
 
+// @title           CHI REST API
+// @version         1.0
+// @description     Product API with auhtentication
+// @termsOfService  http://swagger.io/terms/
+
+// @license.name   MIT License
+
+// @host      localhost:3001
+// @BasePath  /
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
 func main() {
 	configs, err := configs.InitConfig(".")
 	if err != nil {
