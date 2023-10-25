@@ -13,6 +13,8 @@ import (
 	"github.com/go-chi/jwtauth"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
+
+	httpSwagger "github.com/swaggo/http-swagger"
 )
 
 func main() {
@@ -48,6 +50,8 @@ func main() {
 	})
 	r.Post("/users", userHandler.Create)
 	r.Post("/users/generate_token", userHandler.GetJWT)
+
+	r.Get("/docs/*", httpSwagger.Handler(httpSwagger.URL("http://localhost:3001/docs/doc.json")))
 
 	http.ListenAndServe(fmt.Sprintf(":%s", configs.WebServerPort), r)
 }
