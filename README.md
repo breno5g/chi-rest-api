@@ -1,19 +1,18 @@
 # CHI Rest API :computer:
 
-[![Golang](https://img.shields.io/badge/Golang-1.16%2B-blue.svg)](https://golang.org/)
-[![SQLite](https://img.shields.io/badge/SQLite-3.x-blue.svg)](https://sqlite.org/)
-[![Go-Chi](https://img.shields.io/badge/Go--Chi-4.1.2%2B-blue.svg)](https://pkg.go.dev/github.com/go-chi/chi)
-[![Swagger](https://img.shields.io/badge/Swagger-2.0-blue.svg)](https://swagger.io/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/breno5g/chi-rest-api/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/breno5g/chi-rest-api)](https://github.com/breno5g/chi-rest-api/issues)
+[![GitHub stars](https://img.shields.io/github/stars/breno5g/chi-rest-api)](https://github.com/breno5g/chi-rest-api/stargazers)
+![Golang](https://img.shields.io/badge/Go-1.21.1-blue)
+![SQLite](https://img.shields.io/badge/SQLite-3.36.0-blue)
+![Go-Chi](https://img.shields.io/badge/Go--Chi-4.1.2-blue)
+![Swagger](https://img.shields.io/badge/Swagger-2.0-blue)
 
-A simple RESTful API project developed using Golang :rocket:, Swagger :bookmark_tabs:, Chi :construction_worker:, and SQLite :file_folder:. This API serves the purpose of managing users :busts_in_silhouette: and products :package:. It provides endpoints for creating, retrieving, updating, and deleting users and products.
+This is a simple RESTful API project developed using Golang :rocket:, Swagger :bookmark_tabs:, Chi :construction_worker:, and SQLite :file_folder:. The purpose of this API is to create and manage users :busts_in_silhouette: and products :package:. It provides endpoints for creating, retrieving, updating, and deleting users and products.
 
-...
+## 📂 Project Structure
 
-## Project Structure :open_file_folder:
-
-Here is the folder structure of the project:
-
-```
+```css
 chi-rest-api/
 ├─ cmd/
 │  ├─ server/
@@ -32,77 +31,74 @@ chi-rest-api/
 ├─ test/
 ```
 
-## Table of Contents
+- **cmd/server/**: Contains the main application file for your server.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Swagger Documentation](#swagger-documentation)
-- [Database](#database)
-- [Run the Project](#run-the-project)
-- [Contributing](#contributing)
-- [License](#license)
+- **configs/**: Houses configuration files or settings for your Go application.
 
-## Installation :wrench:
+- **docs/**: May include documentation files or assets related to your project.
 
-To get started with this project, follow these installation steps:
+- **internal/**: Organizes your internal code, with separate folders for DTO, entities, and infrastructure.
 
-1. **Clone the repository:**
+- **pkg/entity/**: Contains code related to entities used in your application.
+
+- **pkg/infra/**: Infrastructure code with subdirectories for database and webserver.
+
+- **test/**: May include test files or assets for your project.
+
+## 🛠️ Prerequisites
+
+Before running this project, you'll need to have Golang and SQLite installed on your system.
+
+## 🚀 Running the Project
+
+To run the project:
+
+1. Clone this repository to your local machine.
+
+2. Open your terminal and navigate to the project's root directory:
 
    ```bash
-   git clone https://github.com/yourusername/chi-rest-api.git
    cd chi-rest-api
    ```
 
-2. **Install Dependencies:**
+3. Run the following command to start the application:
 
    ```bash
-   go mod download
+   go run ./cmd/server/main.go
    ```
+
+4. The API will be available at `http://localhost:3001`.
 
 ## Usage :computer:
 
-You can use tools like [curl](https://curl.se/) or [Postman](https://www.postman.com/) to interact with the API. The API provides endpoints for managing users and products.
+You can use tools like [curl](https://curl.se/) or [Postman](https://www.postman.com/) to interact with the API. The API provides endpoints for creating, retrieving, updating, and deleting users and products.
 
 ## Swagger Documentation :book:
 
-This API is documented using Swagger, providing comprehensive details about endpoints, request parameters, and response formats. Access the Swagger documentation by navigating to:
-
-```
-http://localhost:8080/swagger/index.html
-```
-
-Make sure the API is running to access this documentation.
+The API is documented using Swagger, providing comprehensive details about endpoints, request parameters, and response formats. Access the Swagger documentation at `http://localhost:3001/swagger/index.html` when the API is running.
 
 ## Database :file_folder:
 
-The project utilizes SQLite as the database :file_folder:, with the database file located in the `data` directory.
+This project uses SQLite as the database for simplicity. You can find the database file in the `data` directory.
 
-## Run the Project :running:
-
-To run the project, use the following command:
-
-```bash
-make run
-# or
-go run ./cmd/server/main.go
-```
-
-The API server will start, and you can access it at `http://localhost:3001`. You can modify the port in the `main.go` file if needed.
-
-## Contributing :hammer_and_wrench:
+## 🤝 Contributing
 
 If you wish to contribute to this project, please follow these guidelines:
 
 1. Fork the repository.
+
 2. Create a new branch for your feature or bug fix.
+
 3. Implement your changes.
+
 4. Test your changes thoroughly.
+
 5. Create a pull request with a clear description of your changes.
 
-## License :page_with_curl:
+## 📄 License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it according to your needs.
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify it according to your needs.
 
----
+Enjoy using this CHI Rest API with Golang, Swagger, Go-Chi, and SQLite for managing users and products! :tada:
 
-Feel free to further customize this README with emojis or additional information about your project. Good luck with your "CHI Rest API" project! :tada:
+You can further customize this README with your specific details and make any additional changes as needed.
