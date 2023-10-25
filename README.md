@@ -87,7 +87,7 @@ make run
 go run ./cmd/server/main.go
 ```
 
-The API server will start, and you can access it at `http://localhost:8080`. You can modify the port in the `main.go` file if needed.
+The API server will start, and you can access it at `http://localhost:3001`. You can modify the port in the `main.go` file if needed.
 
 ## Contributing :hammer_and_wrench:
 
