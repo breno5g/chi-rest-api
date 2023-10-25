@@ -39,9 +39,9 @@ chi-rest-api/
 
 - **internal/**: Organizes your internal code, with separate folders for DTO, entities, and infrastructure.
 
-- **pkg/entity/**: Contains code related to entities used in your application.
+- **internal/infra/**: Infrastructure code with subdirectories for database and webserver.
 
-- **pkg/infra/**: Infrastructure code with subdirectories for database and webserver.
+- **pkg/entity/**: Contains code related to entities used in your application.
 
 - **test/**: May include test files or assets for your project.
 
